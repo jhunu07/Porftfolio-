@@ -5,7 +5,7 @@ const Education = () => {
   const education = [
     {
       degree: 'Bachelor of Computer Engineering',
-      school: 'Marwadi university University',
+      school: 'Marwadi  University',
       year: '2022 - 2026',
       gpa: '7.7 / 10.0',
       relevant: ['Data Structures', 'Web Development', 'Database Systems'],
