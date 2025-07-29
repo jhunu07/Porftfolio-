@@ -1,7 +1,8 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-
 import tourImage from '../assets/tour.png';
+
+
 import jobImage from '../assets/coffee.png';
 
 
