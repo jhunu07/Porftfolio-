@@ -1,9 +1,9 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-import tourImage from '../assets/tour.png';
+import tourImage from '../assets/tour.png.png';
 
 
-import jobImage from '../assets/coffee.png';
+import jobImage from '../assets/coffee.png.png';
 
 
 const Projects = () => {
