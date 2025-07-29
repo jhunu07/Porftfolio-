@@ -22,9 +22,11 @@ const Hero = () => {
             Computer Science Student & Full Stack Developer
           </p>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Passionate about creating innovative web solutions and building user-friendly applications. 
-            Currently pursuing my Bachelor's degree while working on exciting projects that push the boundaries of technology.
-          </p>
+          I'm a Computer Science student with a strong interest in building real-world software solutions. I enjoy solving problems, learning new technologies, and working in collaborative environments. With experience from academic projects, I’ve developed skills in programming, debugging, and user-focused development. I'm eager to contribute to impactful projects and grow professionally in the tech industry.
+
+
+            
+           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-3 rounded-full transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-purple-500/25">
