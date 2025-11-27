@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  font-family: 'Inter', 'Sora', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #f8fafc;
+  background-color: #020617;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: inherit;
+  background: radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.15), transparent 35%),
+    #020617;
+}
+
+::selection {
+  background-color: rgba(168, 85, 247, 0.4);
+  color: #fff;
+}
+
+button,
+a {
+  @apply transition-all duration-300;
+}

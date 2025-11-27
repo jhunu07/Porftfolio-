@@ -29,3 +29,9 @@ A modern, responsive developer portfolio built using **React** and **Tailwind CS
    ```bash
    git clone https://github.com/your-username/your-portfolio.git
    cd your-portfolio
+
+2. **Set up environment variables:**
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` and add your EmailJS credentials from [emailjs.com](https://www.emailjs.com/)

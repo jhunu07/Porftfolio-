@@ -1,78 +1,93 @@
 import React from 'react';
-import { Code, Globe, Database, Palette, Wrench } from 'lucide-react';
+import { Code, Globe, Database, Wrench } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: [
-        { name: "HTML/CSS", category: "frontend" },
-        { name: "JavaScript", category: "frontend" },
-        { name: "React", category: "frontend" },
-        { name: "TypeScript", category: "frontend" },
-        { name: "Tailwind CSS", category: "frontend" }
-      ]
+      title: 'Frontend Engineering',
+      description: 'Design systems, component libraries, and performant SPA architectures.',
+      icon: <Code className="h-5 w-5 text-purple-300" />,
+      skills: ['React / Next.js', 'TypeScript', 'Tailwind CSS', 'Accessibility (a11y)'],
     },
     {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", category: "backend" },
-        { name: "PHP", category: "backend" },
-        { name: "Express", category: "backend" },
-        { name: "MongoDB", category: "backend" },
-        { name: "mySQL", category: "backend" },
-      
-      ]
+      title: 'Backend & Cloud',
+      description: 'API-first development with security, caching, and monitoring in mind.',
+      icon: <Database className="h-5 w-5 text-purple-300" />,
+      skills: ['Node.js / Express', 'MongoDB / Supabase', 'REST & GraphQL', 'CI/CD (GitHub Actions)'],
     },
     {
-      title: "Programming Languages",
-      skills: [
-        { name: "C", category: "languages" },
-        { name: "Python", category: "languages" },
-        { name: "Java", category: "languages" },
-      ]
+      title: 'Programming Languages',
+      description: 'Writing clean, maintainable code across paradigms.',
+      icon: <Globe className="h-5 w-5 text-purple-300" />,
+      skills: ['JavaScript / TypeScript', 'Python', 'Java', 'C Programming'],
     },
     {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git/GitHub", category: "tools" },
-        { name: "Docker", category: "tools" },
-        { name: "Figma", category: "tools" },
-        { name: "VS Code", category: "tools" },
-      ]
-    }
+      title: 'Tools & Craft',
+      description: 'Processes that keep teams aligned and shipping fast.',
+      icon: <Wrench className="h-5 w-5 text-purple-300" />,
+      skills: ['Git / GitHub', 'Docker & containerization', 'Figma & design handoff', 'Agile rituals & documentation'],
+    },
   ];
 
   return (
-    <section id="skills" className="py-10 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      id="skills"
+      className="py-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Skills & Technologies
-        </h2>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="text-sm uppercase tracking-[0.3em] text-purple-200/70">
+            Core expertise
+          </p>
+          <h2 className="mt-3 text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Skills & technologies
+          </h2>
+          <p className="mt-4 text-gray-400">
+            A balanced toolkit across design, development, and delivery pipelines to
+            ship polished products end-to-end.
+          </p>
+        </div>
 
-        <div className="space-y-10">
-          {skillCategories.map((category, idx) => (
-            <div key={idx}>
-              <h3 className="text-xl font-semibold text-white mb-4 border-l-4 border-purple-500 pl-3">
-                {category.title}
-              </h3>
+        <div className="grid gap-8 md:grid-cols-2">
+          {skillCategories.map((category) => (
+            <motion.div
+              key={category.title}
+              className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className="flex items-center gap-4">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
+                  {category.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                  <p className="text-sm text-gray-400">{category.description}</p>
+                </div>
+              </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {category.skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col items-center text-center"
+              <div className="mt-6 flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span
+                    key={`${category.title}-${skill}`}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-gray-100 hover:border-purple-300 hover:text-white transition-colors"
                   >
-                    <div className="text-purple-400 mb-2">{skill.icon}</div>
-                    <h4 className="text-sm font-medium text-white">{skill.name}</h4>
-                  </div>
+                    {skill}
+                  </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
