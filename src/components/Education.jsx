@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, Calendar } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 
 const milestones = [
   {
@@ -50,7 +50,7 @@ const Education = () => {
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] items-start">
           {/* Timeline */}
           <div className="space-y-6">
-            {milestones.map((edu, index) => (
+            {milestones.map((edu) => (
               <div key={edu.degree} className="relative pl-6">
                 <div className="absolute left-0 top-2 h-full w-px bg-white/10" />
                 <div className="absolute left-0 top-2 -translate-x-1/2">

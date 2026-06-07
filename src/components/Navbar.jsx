@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 
 const Navbar = ({ activeSection, onSectionChange, isMenuOpen, setIsMenuOpen }) => {
   const sections = ['about', 'education', 'projects', 'skills', 'contact'];
