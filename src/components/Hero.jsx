@@ -7,13 +7,8 @@ import {
   ArrowDownRight,
   Sparkles,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
-const stats = [
-  { label: 'Production projects', value: '08+' },
-  { label: 'Hackathons & events', value: '12' },
-  { label: 'Community hours', value: '150+' },
-];
+
 
 const Hero = () => {
   return (
